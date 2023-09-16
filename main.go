@@ -9,11 +9,14 @@ import (
 )
 
 type IslandSummary struct {
-	Name   string  `json:"name"`
-	Kana   string  `json:"kana"`
-	EnName string  `json:"en_name"`
-	Lat    float64 `json:"lat"`
-	Lng    float64 `json:"lng"`
+	Uid        string  `json:"uid"`
+	Name       string  `json:"name"`
+	Kana       string  `json:"kana"`
+	EnName     string  `json:"en_name"`
+	Lat        float64 `json:"lat"`
+	Lng        float64 `json:"lng"`
+	Prefecture string  `json:"prefecture"`
+	City       string  `json:"city"`
 }
 
 func main() {
@@ -37,11 +40,14 @@ func main() {
 		lat, _ := strconv.ParseFloat(island[4], 64)
 		lng, _ := strconv.ParseFloat(island[5], 64)
 		r := IslandSummary{
-			Name:   island[0],
-			Kana:   island[1],
-			EnName: island[2],
-			Lat:    lat,
-			Lng:    lng,
+			Uid:        island[10],
+			Name:       island[0],
+			Kana:       island[1],
+			EnName:     island[2],
+			Lat:        lat,
+			Lng:        lng,
+			Prefecture: island[6],
+			City:       island[7],
 		}
 
 		combinedData = append(combinedData, r)
