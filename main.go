@@ -4,8 +4,11 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
+
+	"github.com/urfave/cli/v2"
 )
 
 type IslandSummary struct {
@@ -19,7 +22,8 @@ type IslandSummary struct {
 	City       string  `json:"city"`
 }
 
-func main() {
+// CSVファイルを読み込み、JSONファイルに変換する
+func genIslandSummaryJsonFromCsv() {
 	var combinedData []IslandSummary
 
 	// CSVファイルを開く
@@ -72,4 +76,19 @@ func main() {
 	}
 
 	fmt.Println("jsonファイルへの出力完了")
+}
+
+func main() {
+	app := &cli.App{
+		Name:  "boom",
+		Usage: "make an explosive entrance",
+		Action: func(*cli.Context) error {
+			genIslandSummaryJsonFromCsv()
+			return nil
+		},
+	}
+
+	if err := app.Run(os.Args); err != nil {
+		log.Fatal(err)
+	}
 }
