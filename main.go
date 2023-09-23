@@ -12,13 +12,13 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "shimapo_tools"
-	app.Usage = "Make `Hello xxx` for arbitrary text"
+	app.Usage = "離島情報共有アプリ 開発者用ツール"
 	app.Version = "0.1.0"
 
 	app.Commands = []*cli.Command{
 		{
 			Name:  "summary_json",
-			Usage: "func 1",
+			Usage: "CSVファイルからフロントアプリで使用するJSONファイルを生成",
 			Action: func(*cli.Context) error {
 				cmd.GenIslandSummaryJsonFromCsv()
 				return nil
@@ -26,7 +26,7 @@ func main() {
 		},
 		{
 			Name:  "sample",
-			Usage: "func 2",
+			Usage: "コマンドを追加する際のサンプル",
 			Action: func(*cli.Context) error {
 				fmt.Println("another func")
 				return nil
