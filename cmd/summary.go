@@ -3,7 +3,7 @@ package cmd
 import (
 	"encoding/csv"
 	"encoding/json"
-	"fmt"
+	"log"
 	"os"
 	"strconv"
 )
@@ -23,10 +23,10 @@ type IslandSummary struct {
 func GenIslandSummaryJsonFromCsv() {
 	var combinedData []IslandSummary
 
-	// CSVファイルを開く TODO: ファイルの設置場所を再考
+	// CSVファイルを開く
 	file, err := os.Open("islands.csv")
 	if err != nil {
-		panic(err)
+		log.Fatal("ルートディレクトリにislands.csvが存在しません。")
 	}
 	defer file.Close()
 
@@ -57,20 +57,20 @@ func GenIslandSummaryJsonFromCsv() {
 	// 結合されたJSONデータをJSONに変換
 	combinedJSON, err := json.Marshal(combinedData)
 	if err != nil {
-		panic(err)
+		log.Fatal("JSONデータの変換に失敗しました。")
 	}
 
-	// 結合されたJSONデータをファイルに出力 TODO: ファイルの出力場所を再考
+	// 結合されたJSONデータをファイルに出力
 	outputFile, err := os.Create("islands.json")
 	if err != nil {
-		panic(err)
+		log.Fatal("JSONファイルの出力に失敗しました。")
 	}
 	defer outputFile.Close()
 
 	_, err = outputFile.Write(combinedJSON)
 	if err != nil {
-		panic(err)
+		log.Fatal("JSONファイルの保存に失敗しました。")
 	}
 
-	fmt.Println("jsonファイルへの出力完了")
+	log.Print("出力完了")
 }
