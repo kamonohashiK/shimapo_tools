@@ -79,12 +79,27 @@ func genIslandSummaryJsonFromCsv() {
 }
 
 func main() {
-	app := &cli.App{
-		Name:  "boom",
-		Usage: "make an explosive entrance",
-		Action: func(*cli.Context) error {
-			genIslandSummaryJsonFromCsv()
-			return nil
+	app := cli.NewApp()
+	app.Name = "shimapo_tools"
+	app.Usage = "Make `Hello xxx` for arbitrary text"
+	app.Version = "0.1.0"
+
+	app.Commands = []*cli.Command{
+		{
+			Name:  "hoge",
+			Usage: "func 1",
+			Action: func(*cli.Context) error {
+				genIslandSummaryJsonFromCsv()
+				return nil
+			},
+		},
+		{
+			Name:  "fuga",
+			Usage: "func 2",
+			Action: func(*cli.Context) error {
+				fmt.Println("another func")
+				return nil
+			},
 		},
 	}
 
