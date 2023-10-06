@@ -12,7 +12,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "shimapo_tools"
 	app.Usage = "離島情報共有アプリ 開発者用ツール"
-	app.Version = "0.1.0"
+	app.Version = "0.1.1"
 
 	app.Commands = []*cli.Command{
 		{
