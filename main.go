@@ -31,6 +31,14 @@ func main() {
 				return nil
 			},
 		},
+		{
+			Name:  "initialize_db",
+			Usage: "Firestoreのデータを初期化",
+			Action: func(*cli.Context) error {
+				cmd.InitializeDb()
+				return nil
+			},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
