@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -25,10 +24,18 @@ func main() {
 			},
 		},
 		{
-			Name:  "sample",
-			Usage: "コマンドを追加する際のサンプル",
+			Name:  "search_list_json",
+			Usage: "CSVファイルからフロントアプリの検索時に使用するJSONファイルを生成",
 			Action: func(*cli.Context) error {
-				fmt.Println("another func")
+				cmd.GenItemsForSearchJsonFromCsv()
+				return nil
+			},
+		},
+		{
+			Name:  "initialize_db",
+			Usage: "Firestoreのデータを初期化",
+			Action: func(*cli.Context) error {
+				cmd.InitializeDb()
 				return nil
 			},
 		},
