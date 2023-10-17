@@ -15,6 +15,7 @@ import (
 type CsvData struct {
 	IslandName string
 	IslandId   string
+	Location   string
 }
 
 var initialQuestions = []string{
@@ -46,6 +47,7 @@ func InitializeDb() {
 		d := CsvData{
 			IslandName: island[0],
 			IslandId:   island[10],
+			Location:   island[6] + island[7],
 		}
 
 		combinedData = append(combinedData, d)
@@ -74,6 +76,7 @@ func InitializeDb() {
 		_, err := islandRef.Set(ctx, map[string]interface{}{
 			"name":           data.IslandName,
 			"main_image_url": "",
+			"location":       data.Location,
 		})
 
 		if err != nil {
