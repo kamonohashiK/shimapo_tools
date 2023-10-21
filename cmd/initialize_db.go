@@ -83,10 +83,11 @@ func InitializeDb() {
 		// islandsのサブコレクションにquestionsコレクションを作成
 		questionsRef := islandRef.Collection("questions")
 		for _, question := range initialQuestions {
+			postedByRef := firestore.Doc("user_profiles/ADMIN")
 			_, _, err = questionsRef.Add(ctx, map[string]interface{}{
 				"question":     question,
 				"answer_count": 0,
-				"posted_by":    "user_profiles/ADMIN",
+				"posted_by":    postedByRef,
 				"posted_at":    time.Now(),
 				"is_default":   true,
 			})
