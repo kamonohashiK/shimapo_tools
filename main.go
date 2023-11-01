@@ -39,6 +39,14 @@ func main() {
 				return nil
 			},
 		},
+		{
+			Name:  "hoge",
+			Usage: "動作のテスト用",
+			Action: func(*cli.Context) error {
+				cmd.Hoge()
+				return nil
+			},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
