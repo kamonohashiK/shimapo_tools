@@ -15,6 +15,7 @@ import (
 type CsvData struct {
 	IslandName string
 	IslandId   string
+	Location   string
 }
 
 var initialQuestions = []string{
@@ -46,6 +47,7 @@ func InitializeDb() {
 		d := CsvData{
 			IslandName: island[0],
 			IslandId:   island[10],
+			Location:   island[6] + island[7],
 		}
 
 		combinedData = append(combinedData, d)
@@ -74,6 +76,7 @@ func InitializeDb() {
 		_, err := islandRef.Set(ctx, map[string]interface{}{
 			"name":           data.IslandName,
 			"main_image_url": "",
+			"location":       data.Location,
 		})
 
 		if err != nil {
@@ -83,11 +86,12 @@ func InitializeDb() {
 		// islandsのサブコレクションにquestionsコレクションを作成
 		questionsRef := islandRef.Collection("questions")
 		for _, question := range initialQuestions {
+			postedByRef := firestore.Doc("user_profiles/ADMIN")
 			_, _, err = questionsRef.Add(ctx, map[string]interface{}{
 				"question":     question,
 				"answer_count": 0,
-				"posted_by":    "user_profiles/ADMIN",
-				"posted_at":    "2020-01-01T00:00:00Z",
+				"posted_by":    postedByRef,
+				"posted_at":    time.Now(),
 				"is_default":   true,
 			})
 			if err != nil {

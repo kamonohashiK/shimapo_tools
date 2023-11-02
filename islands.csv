@@ -11,7 +11,7 @@
 田代島,たしろじま,Tashirojima,田代島,38.294207,141.416446,宮城県,石巻市,MYG,ISM,MYG_ISM_TASHIROJIMA
 寒風沢島,さぶさわじま,Sabusawajima,寒風沢島,38.332662,141.125286,宮城県,塩竈市,MYG,SOG,MYG_SOG_SABUSAWAJIMA
 野々島,ののしま,Nonoshima,野々島,38.339502,141.116532,宮城県,塩竈市,MYG,SOG,MYG_SOG_NONOSHIMA
-桂島,かつらじま,Katsuraijma,桂島(塩竈市),38.334092,141.088068,宮城県,塩竈市,MYG,SOG,MYG_SOG_KATSURAIJMA
+桂島,かつらじま,Katsurajima,桂島(塩竈市),38.334092,141.088068,宮城県,塩竈市,MYG,SOG,MYG_SOG_KATSURAJIMA
 朴島,ほおじま,Hojima,朴島,38.351107,141.124119,宮城県,塩竈市,MYG,SOG,MYG_SOG_HOJIMA
 金華山,きんかさん,Kinkasan,金華山,38.297131,141.571343,宮城県,石巻市,MYG,ISM,MYG_ISM_KINKASAN
 宮戸島,みやとじま,Miyatojima,宮戸島,38.337985,141.15347,宮城県,東松島市,MYG,HMS,MYG_HMS_MIYATOJIMA
@@ -20,7 +20,7 @@
 利島,としま,Toshima,利島,34.523601,139.276539,東京都,利島村,TKY,TSM,TKY_TSM_TOSHIMA
 新島,にいじま,Niijima,新島(新島村),34.374649,139.268936,東京都,新島村,TKY,NJM,TKY_NJM_NIIJIMA
 式根島,しきねじま,Shikinejima,式根島,34.325765,139.210679,東京都,新島村,TKY,NJM,TKY_NJM_SHIKINEJIMA
-神津島,こうづしま,Kodushima,神津島,34.214573,139.147424,東京都,神津島村,TKY,KDS,TKY_KDS_KODUSHIMA
+神津島,こうづしま,Kozushima,神津島,34.214573,139.147424,東京都,神津島村,TKY,KDS,TKY_KDS_KOZUSHIMA
 三宅島,みやけじま,Miyakejima,三宅島,34.078842,139.517819,東京都,三宅村,TKY,MYK,TKY_MYK_MIYAKEJIMA
 御蔵島,みくらしま,Mikurashima,御蔵島,33.875053,139.604414,東京都,御蔵島村,TKY,MKR,TKY_MKR_MIKURASHIMA
 八丈島,はちじょうしま,Hachijoshima,八丈島,33.103021,139.803557,東京都,八丈町,TKY,HCJ,TKY_HCJ_HACHIJOSHIMA
@@ -64,8 +64,8 @@
 大根島,だいこんじま,Daikonjima,大根島,35.494886,133.17113,島根県,松江市,SMN,MTE,SMN_MTE_DAIKONJIMA
 江島,えしま,Eshima,江島(松江市),35.516039,133.192258,島根県,松江市,SMN,MTE,SMN_MTE_ESHIMA
 鹿久居島,かくいじま,Kakuijima,鹿久居島,34.714248,134.311827,岡山県,備前市,OKY,BZN,OKY_BZN_KAKUIJIMA
-大多府島,おおたぶじま,Ohtabujima,大多府島,34.683114,134.295854,岡山県,備前市,OKY,BZN,OKY_BZN_OHTABUJIMA
-頭島,かしらじま,Kasirajima,頭島,34.699979,134.286977,岡山県,備前市,OKY,BZN,OKY_BZN_KASIRAJIMA
+大多府島,おおたぶじま,Ootabujima,大多府島,34.683114,134.295854,岡山県,備前市,OKY,BZN,OKY_BZN_OOTABUJIMA
+頭島,かしらじま,Kashirajima,頭島,34.699979,134.286977,岡山県,備前市,OKY,BZN,OKY_BZN_KASHIRAJIMA
 鴻島,こうじま,Koujima,鴻島,34.699574,134.258562,岡山県,備前市,OKY,BZN,OKY_BZN_KOUJIMA
 長島,ながしま,Nagashima,長島(瀬戸内市),34.67355,134.232499,岡山県,瀬戸内市,OKY,STU,OKY_STU_NAGASHIMA
 前島,まえじま,Maejima,前島(瀬戸内市),34.608096,134.185076,岡山県,瀬戸内市,OKY,STU,OKY_STU_MAEJIMA
@@ -99,7 +99,7 @@
 生野島,いくのしま,Ikunosima,生野島,34.287734,132.91493,広島県,大崎上島町,HRS,OSK,HRS_OSK_IKUNOSIMA
 大崎上島,おおさきかみじま,Osakikamijima,大崎上島,34.241898,132.871196,広島県,大崎上島町,HRS,OSK,HRS_OSK_OSAKIKAMIJIMA
 長島,ながしま,Nagashima,長島(大崎上島町),34.264735,132.86512,広島県,大崎上島町,HRS,OSK,HRS_OSK_NAGASHIMA
-大崎下島,おおさきしもじま,Osakshimojima,大崎下島,34.172306,132.829664,広島県,呉市,HRS,KR,HRS_KR_OSAKSHIMOJIMA
+大崎下島,おおさきしもじま,Osakishimojima,大崎下島,34.172306,132.829664,広島県,呉市,HRS,KR,HRS_KR_OSAKISHIMOJIMA
 三角島,みかどじま,Mikadojima,三角島,34.192867,132.816253,広島県,呉市,HRS,KR,HRS_KR_MIKADOJIMA
 豊島,とよしま,Toyoshima,豊島(呉市),34.171778,132.783318,広島県,呉市,HRS,KR,HRS_KR_TOYOSHIMA
 斎島,いつきしま,Itsukijima,斎島,34.116892,132.791859,広島県,呉市,HRS,KR,HRS_KR_ITSUKIJIMA
@@ -131,7 +131,7 @@
 佐合島,さごうじま,Sagojima,佐合島,33.872032,132.065811,山口県,平生町,YMGC,HRO,YMGC_HRO_SAGOJIMA
 馬島,うましま,Umashima,馬島(田布施町),33.893691,132.049728,山口県,田布施町,YMGC,TBS,YMGC_TBS_UMASHIMA
 牛島,うしま,Usima,牛島(光市),33.85589,132.016309,山口県,光市,YMGC,HKR,YMGC_HKR_USIMA
-笠戸島,かさどしま,Kadadojima,笠戸島,33.948554,131.837721,山口県,下松市,YMGC,KDM,YMGC_KDM_KADADOJIMA
+笠戸島,かさどしま,Kasadojima,笠戸島,33.948554,131.837721,山口県,下松市,YMGC,KDM,YMGC_KDM_KASADOJIMA
 粭島,すくもじま,Sukumojima,粭島,33.978818,131.761891,山口県,周南市,YMGC,SYN,YMGC_SYN_SUKUMOJIMA
 大津島,おおづしま,Ohdushima,大津島,34.00607,131.707129,山口県,周南市,YMGC,SYN,YMGC_SYN_OHDUSHIMA
 野島,のしま,Noshima,野島,33.94334,131.697166,山口県,防府市,YMGC,HUF,YMGC_HUF_NOSHIMA
@@ -144,7 +144,7 @@
 大島,おおしま,Ohshima,大島(萩市),34.498599,131.408709,山口県,萩市,YMGC,HG,YMGC_HG_OHSHIMA
 青海島,おおみじま,Ohmijima,青海島,34.428957,131.222167,山口県,長門市,YMGC,NGT,YMGC_NGT_OHMIJIMA
 角島,つのしま,Tsunoshima,角島,34.360624,130.875331,山口県,下関市,YMGC,SMN,YMGC_SMN_TSUNOSHIMA
-蓋井島,ふたおいじま,Hutaoijima,蓋井島,34.107102,130.779193,山口県,下関市,YMGC,SMN,YMGC_SMN_HUTAOIJIMA
+蓋井島,ふたおいじま,Futaoijima,蓋井島,34.107102,130.779193,山口県,下関市,YMGC,SMN,YMGC_SMN_FUTAOIJIMA
 六連島,むつれじま,Mutsurejima,六連島,33.974398,130.863955,山口県,下関市,YMGC,SMN,YMGC_SMN_MUTSUREJIMA
 大毛島,おおげしま,Ohgeshima,大毛島,34.196004,134.620763,徳島県,鳴門市,TKS,NRT,TKS_NRT_OHGESHIMA
 島田島,しまだじま,Shimadajima,島田島,34.237023,134.604307,徳島県,鳴門市,TKS,NRT,TKS_NRT_SHIMADAJIMA
@@ -268,7 +268,7 @@
 鹿島,かしま,Kashima,鹿島(諫早市),32.871877,129.927205,長崎県,諫早市,NGS,ISH,NGS_ISH_KASHIMA
 大島,おおしま,Ohshima,大島(西海市),33.046064,129.615679,長崎県,西海市,NGS,SIK,NGS_SIK_OHSHIMA
 寺島,てらしま,Terashima,寺島(西海市),33.036853,129.63375,長崎県,西海市,NGS,SIK,NGS_SIK_TERASHIMA
-蛎浦島,かきのうらしま,Kakiunourashima,蛎浦島,33.018421,129.582103,長崎県,西海市,NGS,SIK,NGS_SIK_KAKIUNOURASHIMA
+蛎浦島,かきのうらしま,Kakinourashima,蛎浦島,33.018421,129.582103,長崎県,西海市,NGS,SIK,NGS_SIK_KAKINOURASHIMA
 崎戸島,さきとじま,Sakitojima,崎戸島,33.004083,129.543328,長崎県,西海市,NGS,SIK,NGS_SIK_SAKITOJIMA
 江島,えのしま,Enoshima,江島(西海市),33.011007,129.349155,長崎県,西海市,NGS,SIK,NGS_SIK_ENOSHIMA
 平島,ひらしま,Hirashima,平島(西海市),33.005571,129.242746,長崎県,西海市,NGS,SIK,NGS_SIK_HIRASHIMA
@@ -278,7 +278,7 @@
 伊王島,いおうじま,Iohjima,伊王島,32.697341,129.778132,長崎県,長崎市,NGS,NGS,NGS_NGS_IOHJIMA
 沖之島,おきのしま,Okinoshima,沖之島(長崎市),32.696118,129.779531,長崎県,長崎市,NGS,NGS,NGS_NGS_OKINOSHIMA
 高島,たかしま,Takashima,高島(長崎市),32.659553,129.752375,長崎県,長崎市,NGS,NGS,NGS_NGS_TAKASHIMA
-樺島,かばしま,Kabashima,樺島,32.746531,129.873019,長崎県,長崎市,NGS,NGS,NGS_NGS_KABASHIMA
+樺島,かばしま,Kabashima,樺島,32.561356,129.781988,長崎県,長崎市,NGS,NGS,NGS_NGS_KABASHIMA
 牧島,まきしま,Makishima,牧島(長崎市),32.755986,129.973534,長崎県,長崎市,NGS,NGS,NGS_NGS_MAKISHIMA
 宇久島,うくじま,Ukujima,宇久島,33.27212,129.102323,長崎県,佐世保市,NGS,SSB,NGS_SSB_UKUJIMA
 寺島,てらしま,Terashima,寺島(佐世保市),33.251041,129.066148,長崎県,佐世保市,NGS,SSB,NGS_SSB_TERASHIMA
@@ -289,11 +289,11 @@
 斑島,まだらしま,Madarashima,斑島,33.206262,129.020266,長崎県,小値賀町,NGS,ODK,NGS_ODK_MADARASHIMA
 黒島,くろしま,Kuroshima,黒島(小値賀町),33.180576,129.06006,長崎県,小値賀町,NGS,ODK,NGS_ODK_KUROSHIMA
 大島,おおしま,Ohshima,大島(小値賀町),33.168151,129.020266,長崎県,小値賀町,NGS,ODK,NGS_ODK_OHSHIMA
-中通島,なかどおりじま,Nakadourijima,中通島,32.955909,129.081493,長崎県,新上五島町,NGS,SNK,NGS_SNK_NAKADOURIJIMA
+中通島,なかどおりじま,Nakadoorijima,中通島,32.955909,129.081493,長崎県,新上五島町,NGS,SNK,NGS_SNK_NAKADOORIJIMA
 頭ケ島,かしらがしま,Kashiragashima,頭ケ島,33.010918,129.186874,長崎県,新上五島町,NGS,SNK,NGS_SNK_KASHIRAGASHIMA
 桐ノ小島,きりのこじま,Kirinokojima,桐ノ小島,32.924572,128.962893,長崎県,新上五島町,NGS,SNK,NGS_SNK_KIRINOKOJIMA
 若松島,わかまつじま,Wakamatsujima,若松島,32.89027,129.013749,長崎県,新上五島町,NGS,SNK,NGS_SNK_WAKAMATSUJIMA
-漁生浦島,りょうぜがうらしま,Ryouzagaurashima,漁生浦島,32.909884,128.964015,長崎県,新上五島町,NGS,SNK,NGS_SNK_RYOUZAGAURASHIMA
+漁生浦島,りょうぜがうらしま,Ryouzegaurashima,漁生浦島,32.909884,128.964015,長崎県,新上五島町,NGS,SNK,NGS_SNK_RYOUZEGAURASHIMA
 有福島,ありふくじま,Arifukujima,有福島,32.913871,128.943323,長崎県,新上五島町,NGS,SNK,NGS_SNK_ARIFUKUJIMA
 日島,ひのしま,Hinoshima,日ノ島,32.924572,128.962893,長崎県,新上五島町,NGS,SNK,NGS_SNK_HINOSHIMA
 奈留島,なるしま,Narushima,奈留島,32.840731,128.940713,長崎県,五島市,NGS,GTU,NGS_GTU_NARUSHIMA
@@ -355,7 +355,7 @@
 黒島,くろしま,Kuroshima,黒島(三島村),30.832737,129.935018,鹿児島県,三島村,KGS,MSM,KGS_MSM_KUROSHIMA
 口之島,くちのしま,Kuchinoshima,口之島,29.967374,129.924743,鹿児島県,十島村,KGS,TSM,KGS_TSM_KUCHINOSHIMA
 中之島,なかのしま,Nakanoshima,中之島,29.856991,129.868198,鹿児島県,十島村,KGS,TSM,KGS_TSM_NAKANOSHIMA
-諏訪之瀬島,すわのせじま,Suwasenojima,諏訪之瀬島,29.637537,129.708562,鹿児島県,十島村,KGS,TSM,KGS_TSM_SUWASENOJIMA
+諏訪之瀬島,すわのせじま,Suwanosejima,諏訪之瀬島,29.637537,129.708562,鹿児島県,十島村,KGS,TSM,KGS_TSM_SUWANOSEJIMA
 平島,たいらじま,Tairajima,平島(十島村),29.688798,129.530412,鹿児島県,十島村,KGS,TSM,KGS_TSM_TAIRAJIMA
 悪石島,あくせきじま,Akusekijima,悪石島,29.460113,129.605349,鹿児島県,十島村,KGS,TSM,KGS_TSM_AKUSEKIJIMA
 小宝島,こだからじま,Kodakarajima,小宝島,29.223296,129.324515,鹿児島県,十島村,KGS,TSM,KGS_TSM_KODAKARAJIMA
@@ -411,7 +411,7 @@
 嘉弥真島,かやまじま,Kayamajima,嘉弥真島,24.363552,123.999737,沖縄県,竹富町,OKN,TKT,OKN_TKT_KAYAMAJIMA
 黒島,くろしま,Kuroshima,黒島(竹富町),24.233926,124.014011,沖縄県,竹富町,OKN,TKT,OKN_TKT_KUROSHIMA
 新城島上地,あらぐすくじま（かみじ）,Aragusukujima(Kamiji),新城島上地,24.23421,123.945734,沖縄県,竹富町,OKN,TKT,OKN_TKT_ARAGUSUKUJIMA(KAMIJI)
-新城島下地,あらぐすくじま（しもじ）,Aragusukujima(Shimoji),新城島下地,24.234786,123.940728,沖縄県,竹富町,OKN,TKT,OKN_TKT_ARAGUSUKUJIMA(SHIMOJI)
+新城島下地,あらぐすくじま（しもじ）,Aragusukujima(Shimoji),新城島下地,24.216649,123.927431,沖縄県,竹富町,OKN,TKT,OKN_TKT_ARAGUSUKUJIMA(SHIMOJI)
 西表島,いりおもてじま,Iriomotehima,西表島,24.330061,123.818798,沖縄県,竹富町,OKN,TKT,OKN_TKT_IRIOMOTEHIMA
 由布島,ゆぶじま,Yubujima,由布島,24.342479,123.93249,沖縄県,竹富町,OKN,TKT,OKN_TKT_YUBUJIMA
 鳩間島,はとまじま,Hatomajima,鳩間島,24.472853,123.821589,沖縄県,竹富町,OKN,TKT,OKN_TKT_HATOMAJIMA
