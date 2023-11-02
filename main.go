@@ -47,6 +47,14 @@ func main() {
 				return nil
 			},
 		},
+		{
+			Name:  "prefecture_seeder_generator",
+			Usage: "prefecturesテーブルのベースになるJsonファイルを生成",
+			Action: func(*cli.Context) error {
+				cmd.PrefectureSeederGenerator()
+				return nil
+			},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
