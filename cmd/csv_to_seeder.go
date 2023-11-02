@@ -1,6 +1,9 @@
 package cmd
 
 import (
+	"fmt"
+	"strings"
+
 	"github.com/kamonohashiK/shimapo_tools/models"
 	"github.com/kamonohashiK/shimapo_tools/util"
 )
@@ -68,4 +71,60 @@ func PrefectureSeederGenerator() {
 
 	// Jsonファイルを生成
 	util.JsonGenerator(dbData, "output/prefecture_seeder_base.json")
+}
+
+// citiesテーブル用のJsonファイルを生成
+func CitySeederGenerator() {
+	// CSV -> 構造体
+	csvData := util.CsvToStruct()
+
+	var dbData []models.CityDbData
+	var id int = 1
+
+	for _, data := range csvData {
+		// CSVデータからCitiesを抽出
+		prefecture := data.Prefecture
+		str := data.Cities
+
+		// NOTE: ここまでに作成したファイルから都道府県のIDを取得する　→今回は手作業で対応
+
+		//・区切りで分割
+		tmpSlice := strings.Split(str, "・")
+
+		for _, city := range tmpSlice {
+			d := models.CityDbData{
+				Id:           id,
+				PrefectureId: 1, // TODO: ここに都道府県IDを入れる
+				Name:         city,
+				EnName:       "", //対応するデータがないので空文字にしておく
+				Code:         "", //対応するデータがないので空文字にしておく
+			}
+
+			// 空の場合は追加
+			if dbData == nil {
+				fmt.Println(prefecture, city)
+				dbData = append(dbData, d)
+				id++
+				continue
+			} else {
+				// 同じ名前の都道府県がなければ追加
+				var isExist bool = false
+				for _, db := range dbData {
+					if db.Name == d.Name {
+						isExist = true
+						break
+					}
+				}
+
+				if !isExist {
+					fmt.Println(prefecture, city)
+					dbData = append(dbData, d)
+					id++
+				}
+			}
+		}
+	}
+
+	// Jsonファイルを生成
+	util.JsonGenerator(dbData, "output/city_seeder_base.json")
 }

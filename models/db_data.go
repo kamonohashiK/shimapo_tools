@@ -18,3 +18,12 @@ type PrefectureDbData struct {
 	EnName string `json:"en_name"`
 	Code   string `json:"code"`
 }
+
+// citiesテーブルのデータを格納する構造体
+type CityDbData struct {
+	Id           int    `json:"id"`
+	PrefectureId int    `json:"prefecture_id"`
+	Name         string `json:"name"`
+	EnName       string `json:"en_name"`
+	Code         string `json:"code"`
+}

@@ -55,6 +55,14 @@ func main() {
 				return nil
 			},
 		},
+		{
+			Name:  "city_seeder_generator",
+			Usage: "citiesテーブルのベースになるJsonファイルを生成",
+			Action: func(*cli.Context) error {
+				cmd.CitySeederGenerator()
+				return nil
+			},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
