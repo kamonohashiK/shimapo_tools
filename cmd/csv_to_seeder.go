@@ -1,7 +1,11 @@
 package cmd
 
 import (
+	"encoding/json"
 	"fmt"
+	"io"
+	"log"
+	"os"
 	"strings"
 
 	"github.com/kamonohashiK/shimapo_tools/models"
@@ -127,4 +131,84 @@ func CitySeederGenerator() {
 
 	// Jsonファイルを生成
 	util.JsonGenerator(dbData, "output/city_seeder_base.json")
+}
+
+// city_islandsテーブル用のJsonファイルを生成
+func CityIslandSeederGenerator() {
+	// jsonからcities用のデータを呼び出し
+	cityFile, err := os.Open("output/city_seeder_base.json")
+	if err != nil {
+		log.Fatal("output/city_seeder_base.jsonが存在しません。")
+	}
+	defer cityFile.Close()
+
+	bytes, err := io.ReadAll(cityFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var cityData []models.CityDbData
+	err = json.Unmarshal(bytes, &cityData)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// jsonからislands用のデータを呼び出し
+	islandFile, err := os.Open("output/island_seeder_base.json")
+	if err != nil {
+		log.Fatal("output/island_seeder_base.jsonが存在しません。")
+	}
+
+	bytes, err = io.ReadAll(islandFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var islandData []models.IslandDbData
+	err = json.Unmarshal(bytes, &islandData)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// CSVデータをベースにcity_islands用のデータを生成
+	csvData := util.CsvToStruct()
+
+	var id int = 1
+	var dbData []models.CityIslandDbData
+	for _, data := range csvData {
+		//CSVデータからCitiesを抽出
+		cities := data.Cities
+		tmpSlice := strings.Split(cities, "・")
+		firebaseId := data.FirebaseId
+
+		for _, city := range tmpSlice {
+			// cityDataからcityのIDを取得
+			var cityId int
+			var islandId int
+			for _, c := range cityData {
+				if c.Name == city {
+					cityId = c.Id
+					break
+				}
+			}
+
+			for _, i := range islandData {
+				if i.FirestoreId == firebaseId {
+					islandId = i.Id
+					break
+				}
+			}
+
+			data := models.CityIslandDbData{
+				Id:       id,
+				CityId:   cityId,
+				IslandId: islandId,
+			}
+			dbData = append(dbData, data)
+			id++
+		}
+	}
+
+	// Jsonファイルを生成
+	util.JsonGenerator(dbData, "output/city_island_seeder_base.json")
 }

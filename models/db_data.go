@@ -27,3 +27,9 @@ type CityDbData struct {
 	EnName       string `json:"en_name"`
 	Code         string `json:"code"`
 }
+
+type CityIslandDbData struct {
+	Id       int `json:"id"`
+	CityId   int `json:"city_id"`
+	IslandId int `json:"island_id"`
+}
