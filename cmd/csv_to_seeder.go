@@ -1,10 +1,6 @@
 package cmd
 
 import (
-	"encoding/json"
-	"log"
-	"os"
-
 	"github.com/kamonohashiK/shimapo_tools/models"
 	"github.com/kamonohashiK/shimapo_tools/util"
 )
@@ -28,18 +24,6 @@ func IslandSeederGenerator() {
 		dbData = append(dbData, d)
 	}
 
-	// 結合されたJSONデータをJSONに変換
-	combinedJSON, err := json.Marshal(dbData)
-	if err != nil {
-		log.Fatal("JSONデータの変換に失敗しました。")
-	}
-
-	// JSONファイルを作成
-	jsonFile, err := os.Create("island_seeder_base.json")
-	if err != nil {
-		log.Fatal("JSONファイルの作成に失敗しました。")
-	}
-	defer jsonFile.Close()
-
-	jsonFile.Write(combinedJSON)
+	// Jsonファイルを生成
+	util.JsonGenerator(dbData, "output/island_seeder_base.json")
 }
