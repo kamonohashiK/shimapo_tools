@@ -40,10 +40,10 @@ func main() {
 			},
 		},
 		{
-			Name:  "hoge",
-			Usage: "動作のテスト用",
+			Name:  "island_seeder_generator",
+			Usage: "islandsテーブルのベースになるJsonファイルを生成",
 			Action: func(*cli.Context) error {
-				cmd.Hoge()
+				cmd.IslandSeederGenerator()
 				return nil
 			},
 		},
