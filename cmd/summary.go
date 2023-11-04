@@ -1,11 +1,9 @@
 package cmd
 
 import (
-	"encoding/csv"
-	"encoding/json"
 	"log"
-	"os"
-	"strconv"
+
+	"github.com/kamonohashiK/shimapo_tools/util"
 )
 
 type IslandSummary struct {
@@ -21,56 +19,26 @@ type IslandSummary struct {
 
 // CSVファイルを読み込み、JSONファイルに変換する
 func GenIslandSummaryJsonFromCsv() {
+	// CSV -> 構造体
+	csvData := util.CsvToStruct()
 	var combinedData []IslandSummary
 
-	// CSVファイルを開く
-	file, err := os.Open("islands.csv")
-	if err != nil {
-		log.Fatal("ルートディレクトリにislands.csvが存在しません。")
-	}
-	defer file.Close()
+	for _, data := range csvData {
 
-	reader := csv.NewReader(file)
-
-	for {
-		island, err := reader.Read()
-		if err != nil {
-			break
-		}
-
-		lat, _ := strconv.ParseFloat(island[4], 64)
-		lng, _ := strconv.ParseFloat(island[5], 64)
 		r := IslandSummary{
-			Uid:        island[10],
-			Name:       island[0],
-			Kana:       island[1],
-			EnName:     island[2],
-			Lat:        lat,
-			Lng:        lng,
-			Prefecture: island[6],
-			City:       island[7],
+			Uid:        data.FirebaseId,
+			Name:       data.Name,
+			Kana:       data.Kana,
+			EnName:     data.EnName,
+			Lat:        data.Latitude,
+			Lng:        data.Longitude,
+			Prefecture: data.Prefecture,
+			City:       data.Cities,
 		}
 
 		combinedData = append(combinedData, r)
 	}
 
-	// 結合されたJSONデータをJSONに変換
-	combinedJSON, err := json.Marshal(combinedData)
-	if err != nil {
-		log.Fatal("JSONデータの変換に失敗しました。")
-	}
-
-	// 結合されたJSONデータをファイルに出力
-	outputFile, err := os.Create("islands.json")
-	if err != nil {
-		log.Fatal("JSONファイルの出力に失敗しました。")
-	}
-	defer outputFile.Close()
-
-	_, err = outputFile.Write(combinedJSON)
-	if err != nil {
-		log.Fatal("JSONファイルの保存に失敗しました。")
-	}
-
+	util.JsonGenerator(combinedData, "output/islands.json")
 	log.Print("出力完了")
 }
