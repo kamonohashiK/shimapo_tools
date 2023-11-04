@@ -31,38 +31,6 @@ func main() {
 				return nil
 			},
 		},
-		{
-			Name:  "island_seeder_generator",
-			Usage: "islandsテーブルのベースになるJsonファイルを生成",
-			Action: func(*cli.Context) error {
-				cmd.IslandSeederGenerator()
-				return nil
-			},
-		},
-		{
-			Name:  "prefecture_seeder_generator",
-			Usage: "prefecturesテーブルのベースになるJsonファイルを生成",
-			Action: func(*cli.Context) error {
-				cmd.PrefectureSeederGenerator()
-				return nil
-			},
-		},
-		{
-			Name:  "city_seeder_generator",
-			Usage: "citiesテーブルのベースになるJsonファイルを生成",
-			Action: func(*cli.Context) error {
-				cmd.CitySeederGenerator()
-				return nil
-			},
-		},
-		{
-			Name:  "city_islands_seeder_generator",
-			Usage: "city_islandsテーブルのベースになるJsonファイルを生成",
-			Action: func(*cli.Context) error {
-				cmd.CityIslandSeederGenerator()
-				return nil
-			},
-		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
