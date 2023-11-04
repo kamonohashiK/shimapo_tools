@@ -32,14 +32,6 @@ func main() {
 			},
 		},
 		{
-			Name:  "initialize_db",
-			Usage: "Firestoreのデータを初期化",
-			Action: func(*cli.Context) error {
-				cmd.InitializeDb()
-				return nil
-			},
-		},
-		{
 			Name:  "island_seeder_generator",
 			Usage: "islandsテーブルのベースになるJsonファイルを生成",
 			Action: func(*cli.Context) error {
